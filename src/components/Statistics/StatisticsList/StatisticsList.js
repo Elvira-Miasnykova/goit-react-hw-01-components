@@ -19,3 +19,4 @@ StatisticsList.propTypes = {
         }
     )).isRequired,
 };
+
