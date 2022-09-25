@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import {UserImage, UserName, UserTag, UserLocation, UserStatsItem, UserStatsLabel, UserStatsQuantity} from './Profile.styled';
+import { UserImage, UserName, UserTag, UserLocation, UserStatsItem, UserStatsLabel, UserStatsQuantity } from './Profile.styled';
+import { Box } from 'components/Box';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
-        <div className="profile">
-            <div className="description">
+        <Box m="0 auto" borderRadius="regular" width="25%" mb={4}>
+            <Box  display="flex" flexDirection="column" alignItems="center" pt={4} pb={4}  >
                 <UserImage
                     src={avatar}
                     alt={username}
@@ -13,10 +14,11 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                 <UserName>{username}</UserName>
                 <UserTag>@{tag}</UserTag>
                 <UserLocation>{location}</UserLocation>
-            </div>
+            </Box>
 
             {/* Box */}
-            <ul class="stats"> 
+            <Box display="flex" justifyContent="space-around" pt={3} pb={3}
+                as="ul"> 
                 <UserStatsItem>
                     <UserStatsLabel>Followers</UserStatsLabel>
                     <UserStatsQuantity>{stats.followers}</UserStatsQuantity>
@@ -29,8 +31,8 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                     <UserStatsLabel>Likes</UserStatsLabel>
                     <UserStatsQuantity>{stats.likes}</UserStatsQuantity>
                 </UserStatsItem>
-            </ul>
-        </div>
+            </Box>
+        </Box>
     );
 };
 

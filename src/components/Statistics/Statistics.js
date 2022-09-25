@@ -1,19 +1,15 @@
 import PropTypes from 'prop-types';
 import { Header } from './Title/Title';
 import { StatisticsList } from './StatisticsList/StatisticsList';
+import { Box } from "components/Box";
 
 export const Statistics = ({title, stats}) => {
     return (
-        <section class="statistics">
-            
-                {title  && <Header title="Upload stats" />}
-            
-
-            
-                <StatisticsList stats={stats}/>
-                
-            
-        </section>
+        <Box m="0 auto" borderRadius="regular" width="30%" mb={4}
+            as="section">
+            {title  && <Header title={title} />}
+            <StatisticsList stats={stats}/>
+        </Box>
     );
 };
 

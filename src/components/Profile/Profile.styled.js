@@ -38,7 +38,6 @@ color: ${p => p.theme.colors.secondary};
 
 export const UserStatsItem = styled.li`
 width: 100%;
-margin-bottom: ${p => p.theme.space[2]}px;
 border: ${p => p.theme.borders.regular} ${p => p.theme.colors.secondary};
 text-aligh: center;
 `;

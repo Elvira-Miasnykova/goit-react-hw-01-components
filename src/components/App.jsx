@@ -6,10 +6,11 @@ import { Profile } from "components/Profile/Profile";
 import { Statistics } from "./Statistics/Statistics";
 import { FriendsList } from "./FriendsList/FriendsList";
 import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
+import { Box } from "./Box";
 
 export const App = () => {
   return (
-    <div>
+    <Box pt={3} pb={3}>
     <Profile username={user.username}
       tag={user.tag}
       location={user.location}
@@ -20,7 +21,7 @@ export const App = () => {
     <Statistics stats={data} />
       <FriendsList friends={friends} />
       <TransactionHistory items={transactions} />
-      </div>
+      </Box>
   );
   
 };
