@@ -1,33 +1,34 @@
 import PropTypes from 'prop-types';
-
+import {UserImage, UserName, UserTag, UserLocation, UserStatsItem, UserStatsLabel, UserStatsQuantity} from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
         <div className="profile">
             <div className="description">
-                <img
+                <UserImage
                     src={avatar}
                     alt={username}
-                    className="avatar"
+                    
                 />
-                <p class="name">{username}</p>
-                <p class="tag">@{tag}</p>
-                <p class="location">{location}</p>
+                <UserName>{username}</UserName>
+                <UserTag>@{tag}</UserTag>
+                <UserLocation>{location}</UserLocation>
             </div>
 
-            <ul class="stats">
-                <li>
-                    <span class="label">Followers</span>
-                    <span class="quantity">{stats.followers}</span>
-                </li>
-                <li>
-                    <span class="label">Views</span>
-                    <span class="quantity">{stats.views}</span>
-                </li>
-                <li>
-                    <span class="label">Likes</span>
-                    <span class="quantity">{stats.likes}</span>
-                </li>
+            {/* Box */}
+            <ul class="stats"> 
+                <UserStatsItem>
+                    <UserStatsLabel>Followers</UserStatsLabel>
+                    <UserStatsQuantity>{stats.followers}</UserStatsQuantity>
+                </UserStatsItem>
+                <UserStatsItem>
+                    <UserStatsLabel>Views</UserStatsLabel>
+                    <UserStatsQuantity>{stats.views}</UserStatsQuantity>
+                </UserStatsItem>
+                <UserStatsItem>
+                    <UserStatsLabel>Likes</UserStatsLabel>
+                    <UserStatsQuantity>{stats.likes}</UserStatsQuantity>
+                </UserStatsItem>
             </ul>
         </div>
     );

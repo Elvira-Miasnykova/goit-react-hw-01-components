@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import { StatisticsItem } from './StatisticsItem/StatisticsItem';
+import { StatsUl } from './StatisticsList.styled';
 
 export const StatisticsList = ({ stats }) => {
     return (
-        <ul >
+        <StatsUl>
             {stats.map((stat) => (<StatisticsItem key={stat.id} label={stat.label} percentage={stat.percentage} />))}
-        </ul>
+        </StatsUl>
     );
 };
 

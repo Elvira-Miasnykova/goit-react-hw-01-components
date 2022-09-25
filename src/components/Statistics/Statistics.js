@@ -9,10 +9,10 @@ export const Statistics = ({title, stats}) => {
                 {title  && <Header title="Upload stats" />}
             
 
-            <ul>
+            
                 <StatisticsList stats={stats}/>
                 
-            </ul>
+            
         </section>
     );
 };
